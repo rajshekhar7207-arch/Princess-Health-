@@ -1,1 +1,23 @@
-include ':app'
+apply plugin: 'com.android.application'
+
+android {
+    namespace "com.example.princess_health"
+    compileSdkVersion 34
+
+    defaultConfig {
+        applicationId "com.example.princess_health"
+        minSdkVersion 21
+        targetSdkVersion 34
+        versionCode 1
+        versionName "1.0.0"
+    }
+
+    buildTypes {
+        release {
+            shrinkResources false
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+        }
+    }
+}
+
